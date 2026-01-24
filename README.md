@@ -239,7 +239,7 @@ curl -s "PROXY_URL/tasks/list?limit=10"
 ```
 ### Demo
 
-# ToDo Video Link:
+# ToDo Video:
 [x] Create 2–3 tasks via GPT (one with due_at, one with scheduled_for, one normal)
 [x] “List my active tasks” (GPT → endpoints → Sheet updates visible)
 [x] “What should I do next right now?” (shows /tasks/next result)
