@@ -1,0 +1,80 @@
+Topic: AI-first task manager demo
+Presenter: Popescu Alberto
+
+
+Video content:
+
+1. Present the app components:
+
+- chatgpt (frontend), cloudflare worker (proxy), app script (backend), google sheet (db).
+
+
+2. Go through the "ToDo" in README:
+
+- create 3 tasks via GPT (normal + due_at + scheduled_for):
+	Create a task “Refactor auth middleware” with priority 3.
+	Create a task “Pay electricity bill” priority 5 due today at 6pm in Europe/Bucharest.
+	Create a task “Prepare sprint notes” priority 4 scheduled for today at 9pm in Europe/Bucharest.
+
+- list active tasks: List my active tasks.
+
+- ask for next step: What should I do next right now? Use timezone Europe/Bucharest.
+
+- start handling: scheduled_for in the future gets excluded:
+	Update “Prepare sprint notes” and set scheduled_for to tomorrow at 9am Europe/Bucharest.
+	What should I do next right now? timezone Europe/Bucharest.
+
+- due handling: overdue task is prioritized:
+	Create a task “Submit reimbursement form” priority 2 due yesterday at 5pm Europe/Bucharest.
+	What should I do next right now? timezone Europe/Bucharest. 
+
+- snooze the current best task; confirm it disappears
+	Snooze the current best task; confirm it disappears
+	What should I do next right now?
+
+- complete a task; confirm it’s excluded
+	Mark “Pay electricity bill” as complete.
+	What should I do next right now?
+
+- display completed tasks:
+	Show my completed tasks.
+
+- present log tab
+
+- ambiguity demo1:
+	Create a task “Meeting: customer sync” priority 3.
+	Create a task “Meeting: internal planning” priority 3.
+
+	Snooze the meeting task until tomorrow morning.
+	Snooze “Meeting: customer sync”.
+
+- ambiguity demo2:
+	Set “Refactor auth middleware” to next week.
+	Next Tuesday at 10am Europe/Bucharest.	
+	Create a task “Idempotency test” with idempotency_key “demo-123”.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
